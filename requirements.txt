@@ -1,0 +1,2 @@
+1) sudo pip3 install dash dash-renderer dash-html-components dash-core-components plotly
+2) sudo pip3 install --upgrade pandas pandas-datareader
