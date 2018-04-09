@@ -1,20 +1,14 @@
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
-from pandas_datareader.data import DataReader
 import time
 from collections import deque
 import plotly.graph_objs as go
 import random
+# import cv2
 
+#cap = cv2.VideoCapture(0)
 app = dash.Dash('vehicle-data')
-
-data_dict = {"Oil Temperature":oil_temps,
-"Intake Temperature": intake_temps,
-"Coolant Temperature": coolant_temps,
-"RPM":rpms,
-"Speed":speeds,
-"Throttle Position":throttle_pos}
 
 max_length = 50
 times = deque(maxlen=max_length)
@@ -24,6 +18,13 @@ coolant_temps = deque(maxlen=max_length)
 rpms = deque(maxlen=max_length)
 speeds = deque(maxlen=max_length)
 throttle_pos = deque(maxlen=max_length)
+data_dict = {"Oil Temperature":oil_temps,
+"Intake Temperature": intake_temps,
+"Coolant Temperature": coolant_temps,
+"RPM":rpms,
+"Speed":speeds,
+"Throttle Position":throttle_pos}
+
 
 
 def update_obd_values(times, oil_temps, intake_temps, coolant_temps, rpms, speeds, throttle_pos):
@@ -45,7 +46,7 @@ def update_obd_values(times, oil_temps, intake_temps, coolant_temps, rpms, speed
 
 times, oil_temps, intake_temps, coolant_temps, rpms, speeds, throttle_pos = update_obd_values(times, oil_temps, intake_temps, coolant_temps, rpms, speeds, throttle_pos)
 
-app.layout = html.Div([
+app.layout = html.Div(children = [
     html.Div([
         html.H2('Vehicle Data',
                 style={'float': 'left',
@@ -54,7 +55,7 @@ app.layout = html.Div([
     dcc.Dropdown(id='vehicle-data-name',
                  options=[{'label': s, 'value': s}
                           for s in data_dict.keys()],
-                 value=['Coolant Temperature','Oil Temperature','Intake Temperature'],
+                 value=['Coolant Temperature'],
                  multi=True
                  ),
     html.Div(children=html.Div(id='graphs'), className='row'),

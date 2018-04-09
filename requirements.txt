@@ -1,2 +1,5 @@
 1) sudo pip3 install dash dash-renderer dash-html-components dash-core-components plotly
 2) sudo pip3 install --upgrade pandas pandas-datareader
+
+For Sentiment Analysis Part
+  sudo pip3 install textblob vadersentiment       #textblob is NLTK based whereas vadersentiment is pure sentiment analysis
