@@ -1,0 +1,18 @@
+min() arg is an empty sequence
+Execution failed on sql 'SELECT * FROM sentiment WHERE tweet LIKE '%love%' ORDER BY unix DESC LIMIT 1000': database is locked
+Execution failed on sql 'SELECT * FROM sentiment WHERE tweet LIKE '%love%' ORDER BY unix DESC LIMIT 1000': database is locked
+min() arg is an empty sequence
+min() arg is an empty sequence
+min() arg is an empty sequence
+min() arg is an empty sequence
+min() arg is an empty sequence
+min() arg is an empty sequence
+min() arg is an empty sequence
+Execution failed on sql 'SELECT * FROM sentiment WHERE tweet LIKE '%olympic%' ORDER BY unix DESC LIMIT 1000': database is locked
+Execution failed on sql 'SELECT * FROM sentiment WHERE tweet LIKE '%olympic%' ORDER BY unix DESC LIMIT 1000': database is locked
+min() arg is an empty sequence
+min() arg is an empty sequence
+min() arg is an empty sequence
+min() arg is an empty sequence
+Execution failed on sql 'SELECT * FROM sentiment WHERE tweet LIKE '%usa%' ORDER BY unix DESC LIMIT 1000': database is locked
+Execution failed on sql 'SELECT * FROM sentiment WHERE tweet LIKE '%usa%' ORDER BY unix DESC LIMIT 1000': database is locked
